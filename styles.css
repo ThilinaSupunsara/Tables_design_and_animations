@@ -1,0 +1,147 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    padding: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 1em;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    background-color: #ffffff; /* Table background color */
+    animation: tableFadeIn 1s ease-in-out;
+}
+
+@keyframes tableFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    transition: background-color 0.3s ease;
+    vertical-align: middle;
+}
+
+th {
+    background-color: #009879;
+    color: white;
+}
+
+tr {
+    border-bottom: 1px solid #dddddd;
+}
+
+tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+tr:hover {
+    background-color: #e0f7fa;
+}
+
+tr:last-of-type {
+    border-bottom: 2px solid #009879;
+}
+
+img {
+    vertical-align: middle;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    border: 2px solid #009879;
+}
+
+.status-active {
+    background-color: green;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.status-inactive {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 5px 10px;
+    text-align: center;
+}
+
+.progress-bar {
+    background-color: #d2cbcb;
+    border-radius: 5px;
+    height: 20px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress-bar-inner {
+    background-color: #4caf50;
+    height: 100%;
+    border-radius: 5px;
+    animation: progressBarGrow 2s ease-in-out;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+@keyframes progressBarGrow {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+.progress-percentage {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-weight: bold;
+}
+
+.growth-positive {
+    color: green;
+    font-weight: bold;
+}
+
+.growth-negative {
+    color: red;
+    font-weight: bold;
+}
+
+.win-ratio {
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: #e0f7fa;
+    animation: popIn 0.5s ease-out;
+}
+
+@keyframes popIn {
+    from { transform: scale(0); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+a {
+    color: blue;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: #f3f3f3;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover {
+    background-color: #e0f7fa;
+    transform: scale(1.1);
+    text-decoration: underline;
+}
